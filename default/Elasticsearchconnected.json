@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1753190208739,
+    "description" : "Elasticsearch_connected",
+    "identifier" : "Elasticsearchconnected",
+    "lastModifiedTimestamp" : 1753190208739,
+    "name" : "Elasticsearch_connected",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
