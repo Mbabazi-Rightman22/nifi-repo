@@ -973,7 +973,7 @@
       "identifier" : "b4aa458e-2ea1-31f3-bec7-9b099bff0ab7",
       "label" : "Connecting Nifi database to Elasticsearch\n",
       "position" : {
-        "x" : -1384.0,
+        "x" : -1376.0,
         "y" : -448.0
       },
       "style" : {
@@ -984,7 +984,7 @@
       "zIndex" : 1
     } ],
     "maxConcurrentTasks" : 1,
-    "name" : "Elastic",
+    "name" : "Elastic_git",
     "outputPorts" : [ ],
     "position" : {
       "x" : 0.0,
