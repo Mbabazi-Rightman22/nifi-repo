@@ -222,36 +222,6 @@
       },
       "zIndex" : 10
     }, {
-      "backPressureDataSizeThreshold" : "2 GB",
-      "backPressureObjectThreshold" : 1000000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "37b82ae8-5d09-394c-802e-bb705827b98f",
-        "name" : "LogAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "9dd7acc7-557e-3980-8abf-3f2e4551b4c6",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "failure", "retry" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "40d85a87-6ed0-38dd-836b-865098bfa5e6",
-        "name" : "PutDatabaseRecord",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 11
-    }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
       "bends" : [ ],
@@ -281,6 +251,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 1
+    }, {
+      "backPressureDataSizeThreshold" : "2 GB",
+      "backPressureObjectThreshold" : 1000000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "37b82ae8-5d09-394c-802e-bb705827b98f",
+        "name" : "LogAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "9dd7acc7-557e-3980-8abf-3f2e4551b4c6",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure", "retry" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "40d85a87-6ed0-38dd-836b-865098bfa5e6",
+        "name" : "PutDatabaseRecord",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 11
     } ],
     "controllerServices" : [ {
       "bulletinLevel" : "WARN",
@@ -305,15 +305,15 @@
       "properties" : {
         "dbcp-min-idle-conns" : "0",
         "Max Wait Time" : "500 millis",
-        "Database Driver Class Name" : "org.mariadb.jdbc.Driver",
+        "Database Driver Class Name" : "org.postgresql.Driver",
         "dbcp-min-evictable-idle-time" : "30 mins",
         "Max Total Connections" : "8",
         "dbcp-max-conn-lifetime" : "-1",
-        "Database Connection URL" : "jdbc:mariadb://localhost:3306/nifi_test?useSSL=false&allowPublicKeyRetrieval=true",
+        "Database Connection URL" : "jdbc:postgresql://172.16.40.30:5432/postgres",
         "dbcp-time-between-eviction-runs" : "-1",
-        "Database User" : "root",
+        "Database User" : "admin",
         "dbcp-soft-min-evictable-idle-time" : "-1",
-        "database-driver-locations" : "/opt/jdbc-drivers/mariadb-java-client-3.3.0.jar",
+        "database-driver-locations" : "/opt/nifi/nifi-current/lib/postgresql-42.7.3.jar",
         "dbcp-max-idle-conns" : "8"
       },
       "propertyDescriptors" : {
@@ -408,7 +408,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
           },
           "sensitive" : false
         },
@@ -590,7 +590,7 @@
       "groupIdentifier" : "flow-contents-group",
       "height" : 912.0,
       "identifier" : "80d0f39a-7d55-3c8a-9ad4-057e6496aea0",
-      "label" : "Fetch API and update in mariadb",
+      "label" : "Fetch API and update in postgres",
       "position" : {
         "x" : 832.0,
         "y" : -1072.0
@@ -1739,7 +1739,7 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "5fb58497-4dd3-45f6-ab9c-f7b599749efb",
+    "author" : "nifiadmin",
     "flowIdentifier" : "Fetchapi",
     "timestamp" : 0
   }
