@@ -301,7 +301,7 @@
       } ],
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "34bff2ae-3f60-3a67-a2ce-7a19b7addb86",
-      "name" : "Mariadb_fetchApi",
+      "name" : "postgres_fetchApi",
       "properties" : {
         "dbcp-min-idle-conns" : "0",
         "Max Wait Time" : "500 millis",
