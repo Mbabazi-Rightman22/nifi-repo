@@ -79,36 +79,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "ac6b3207-0197-1000-fbb7-25fa291ee59b",
-        "name" : "LogAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "7065fd93-37e8-38ea-aef9-d70cbd870cd5",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "ba50cd01-7bb2-306b-a391-97fa8983f155",
-        "name" : "PutDatabaseRecord",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 14
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "ba50cd01-7bb2-306b-a391-97fa8983f155",
         "name" : "PutDatabaseRecord",
         "type" : "PROCESSOR"
@@ -131,6 +101,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 11
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "ac6b3207-0197-1000-fbb7-25fa291ee59b",
+        "name" : "LogAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7065fd93-37e8-38ea-aef9-d70cbd870cd5",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "ba50cd01-7bb2-306b-a391-97fa8983f155",
+        "name" : "PutDatabaseRecord",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 14
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -519,92 +519,6 @@
           "group" : "org.apache.nifi",
           "version" : "2.4.0"
         },
-        "type" : "org.apache.nifi.serialization.RecordReaderFactory"
-      } ],
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "d1dcd67b-41a1-3560-942b-41f92272dc3b",
-      "name" : "AvroReader",
-      "properties" : {
-        "schema-name" : "${schema.name}",
-        "cache-size" : "1000",
-        "schema-access-strategy" : "embedded-avro-schema",
-        "schema-text" : "${avro.schema}"
-      },
-      "propertyDescriptors" : {
-        "schema-reference-reader" : {
-          "displayName" : "Schema Reference Reader",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "schema-reference-reader",
-          "sensitive" : false
-        },
-        "schema-branch" : {
-          "displayName" : "Schema Branch",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "schema-branch",
-          "sensitive" : false
-        },
-        "schema-name" : {
-          "displayName" : "Schema Name",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "schema-name",
-          "sensitive" : false
-        },
-        "cache-size" : {
-          "displayName" : "Cache Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "cache-size",
-          "sensitive" : false
-        },
-        "schema-registry" : {
-          "displayName" : "Schema Registry",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "schema-registry",
-          "sensitive" : false
-        },
-        "schema-access-strategy" : {
-          "displayName" : "Schema Access Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "schema-access-strategy",
-          "sensitive" : false
-        },
-        "schema-version" : {
-          "displayName" : "Schema Version",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "schema-version",
-          "sensitive" : false
-        },
-        "schema-text" : {
-          "displayName" : "Schema Text",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "schema-text",
-          "sensitive" : false
-        }
-      },
-      "scheduledState" : "DISABLED",
-      "type" : "org.apache.nifi.avro.AvroReader"
-    }, {
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-record-serialization-services-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.4.0"
-      },
-      "comments" : "",
-      "componentType" : "CONTROLLER_SERVICE",
-      "controllerServiceApis" : [ {
-        "bundle" : {
-          "artifact" : "nifi-standard-services-api-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.4.0"
-        },
         "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
       } ],
       "groupIdentifier" : "flow-contents-group",
@@ -714,6 +628,92 @@
       },
       "scheduledState" : "DISABLED",
       "type" : "org.apache.nifi.avro.AvroRecordSetWriter"
+    }, {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-record-serialization-services-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.4.0"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.4.0"
+        },
+        "type" : "org.apache.nifi.serialization.RecordReaderFactory"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d1dcd67b-41a1-3560-942b-41f92272dc3b",
+      "name" : "AvroReader",
+      "properties" : {
+        "schema-name" : "${schema.name}",
+        "cache-size" : "1000",
+        "schema-access-strategy" : "embedded-avro-schema",
+        "schema-text" : "${avro.schema}"
+      },
+      "propertyDescriptors" : {
+        "schema-reference-reader" : {
+          "displayName" : "Schema Reference Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-reference-reader",
+          "sensitive" : false
+        },
+        "schema-branch" : {
+          "displayName" : "Schema Branch",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-branch",
+          "sensitive" : false
+        },
+        "schema-name" : {
+          "displayName" : "Schema Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-name",
+          "sensitive" : false
+        },
+        "cache-size" : {
+          "displayName" : "Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "cache-size",
+          "sensitive" : false
+        },
+        "schema-registry" : {
+          "displayName" : "Schema Registry",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "schema-registry",
+          "sensitive" : false
+        },
+        "schema-access-strategy" : {
+          "displayName" : "Schema Access Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-access-strategy",
+          "sensitive" : false
+        },
+        "schema-version" : {
+          "displayName" : "Schema Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-version",
+          "sensitive" : false
+        },
+        "schema-text" : {
+          "displayName" : "Schema Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "schema-text",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.avro.AvroReader"
     }, {
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -1060,7 +1060,7 @@
         "dbcp-time-between-eviction-runs" : "-1",
         "Database User" : "admin",
         "dbcp-soft-min-evictable-idle-time" : "-1",
-        "database-driver-locations" : "/opt/jdbc-drivers/postgresql-42.7.3.jar",
+        "database-driver-locations" : "/opt/nifi/nifi-current/lib/postgresql-42.7.3.jar",
         "dbcp-max-idle-conns" : "8"
       },
       "propertyDescriptors" : {
@@ -1155,7 +1155,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
           },
           "sensitive" : false
         },
@@ -1352,7 +1352,7 @@
         "dbcp-time-between-eviction-runs" : "-1",
         "Database User" : "root",
         "dbcp-soft-min-evictable-idle-time" : "-1",
-        "database-driver-locations" : "/opt/jdbc-drivers/mariadb-java-client-3.3.0.jar",
+        "database-driver-locations" : "/opt/nifi/nifi-current/lib/mariadb-java-client-3.3.3.jar",
         "dbcp-max-idle-conns" : "8"
       },
       "propertyDescriptors" : {
@@ -1447,7 +1447,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "FILE", "URL", "DIRECTORY" ]
+            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
           },
           "sensitive" : false
         },
@@ -1796,6 +1796,129 @@
       "comments" : "",
       "componentType" : "PROCESSOR",
       "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "9a8abd4e-da77-372b-856e-5bf908751f6f",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "MergeRecord",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 768.0,
+        "y" : -576.0
+      },
+      "properties" : {
+        "max-bin-age" : "30 sec",
+        "correlation-attribute-name" : "ID",
+        "Attribute Strategy" : "Keep Only Common Attributes",
+        "min-records" : "1",
+        "max-bin-size" : "10 mb",
+        "record-writer" : "8f893b30-500e-3e13-8bf1-d48826499a67",
+        "merge-strategy" : "Bin-Packing Algorithm",
+        "record-reader" : "61e5b5f4-1a36-30cc-aceb-36405037c3ba",
+        "max-records" : "1000",
+        "min-bin-size" : "0 B",
+        "max.bin.count" : "10"
+      },
+      "propertyDescriptors" : {
+        "max-bin-age" : {
+          "displayName" : "Max Bin Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-bin-age",
+          "sensitive" : false
+        },
+        "correlation-attribute-name" : {
+          "displayName" : "Correlation Attribute Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "correlation-attribute-name",
+          "sensitive" : false
+        },
+        "Attribute Strategy" : {
+          "displayName" : "Attribute Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attribute Strategy",
+          "sensitive" : false
+        },
+        "min-records" : {
+          "displayName" : "Minimum Number of Records",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "min-records",
+          "sensitive" : false
+        },
+        "max-bin-size" : {
+          "displayName" : "Maximum Bin Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-bin-size",
+          "sensitive" : false
+        },
+        "record-writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-writer",
+          "sensitive" : false
+        },
+        "merge-strategy" : {
+          "displayName" : "Merge Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "merge-strategy",
+          "sensitive" : false
+        },
+        "record-reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-reader",
+          "sensitive" : false
+        },
+        "max-records" : {
+          "displayName" : "Maximum Number of Records",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-records",
+          "sensitive" : false
+        },
+        "min-bin-size" : {
+          "displayName" : "Minimum Bin Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "min-bin-size",
+          "sensitive" : false
+        },
+        "max.bin.count" : {
+          "displayName" : "Maximum Number of Bins",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max.bin.count",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.MergeRecord",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.4.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
       "executionNode" : "PRIMARY",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "abf8a2d9-0197-1000-d08e-b23ae386b951",
@@ -1972,129 +2095,6 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.QueryDatabaseTableRecord",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.4.0"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "9a8abd4e-da77-372b-856e-5bf908751f6f",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "MergeRecord",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 768.0,
-        "y" : -576.0
-      },
-      "properties" : {
-        "max-bin-age" : "30 sec",
-        "correlation-attribute-name" : "ID",
-        "Attribute Strategy" : "Keep Only Common Attributes",
-        "min-records" : "1",
-        "max-bin-size" : "10 mb",
-        "record-writer" : "8f893b30-500e-3e13-8bf1-d48826499a67",
-        "merge-strategy" : "Bin-Packing Algorithm",
-        "record-reader" : "61e5b5f4-1a36-30cc-aceb-36405037c3ba",
-        "max-records" : "1000",
-        "min-bin-size" : "0 B",
-        "max.bin.count" : "10"
-      },
-      "propertyDescriptors" : {
-        "max-bin-age" : {
-          "displayName" : "Max Bin Age",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "max-bin-age",
-          "sensitive" : false
-        },
-        "correlation-attribute-name" : {
-          "displayName" : "Correlation Attribute Name",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "correlation-attribute-name",
-          "sensitive" : false
-        },
-        "Attribute Strategy" : {
-          "displayName" : "Attribute Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attribute Strategy",
-          "sensitive" : false
-        },
-        "min-records" : {
-          "displayName" : "Minimum Number of Records",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "min-records",
-          "sensitive" : false
-        },
-        "max-bin-size" : {
-          "displayName" : "Maximum Bin Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "max-bin-size",
-          "sensitive" : false
-        },
-        "record-writer" : {
-          "displayName" : "Record Writer",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "record-writer",
-          "sensitive" : false
-        },
-        "merge-strategy" : {
-          "displayName" : "Merge Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "merge-strategy",
-          "sensitive" : false
-        },
-        "record-reader" : {
-          "displayName" : "Record Reader",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "record-reader",
-          "sensitive" : false
-        },
-        "max-records" : {
-          "displayName" : "Maximum Number of Records",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "max-records",
-          "sensitive" : false
-        },
-        "min-bin-size" : {
-          "displayName" : "Minimum Bin Size",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "min-bin-size",
-          "sensitive" : false
-        },
-        "max.bin.count" : {
-          "displayName" : "Maximum Number of Bins",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "max.bin.count",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.MergeRecord",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
@@ -2928,7 +2928,7 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "5fb58497-4dd3-45f6-ab9c-f7b599749efb",
+    "author" : "nifiadmin",
     "flowIdentifier" : "Mbabazi-Rightman22-windows",
     "timestamp" : 0
   }
