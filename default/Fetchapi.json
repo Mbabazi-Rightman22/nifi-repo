@@ -309,11 +309,11 @@
         "dbcp-min-evictable-idle-time" : "30 mins",
         "Max Total Connections" : "8",
         "dbcp-max-conn-lifetime" : "-1",
-        "Database Connection URL" : "jdbc:postgresql://172.16.40.30:5432/postgres",
+        "Database Connection URL" : "jdbc:postgresql://197.243.115.248:5432/postgres",
         "dbcp-time-between-eviction-runs" : "-1",
         "Database User" : "admin",
         "dbcp-soft-min-evictable-idle-time" : "-1",
-        "database-driver-locations" : "/opt/nifi/nifi-current/lib/postgresql-42.7.3.jar",
+        "database-driver-locations" : "/opt/nifi/nifi-current/lib/postgresql-42.7.4.jar",
         "dbcp-max-idle-conns" : "8"
       },
       "propertyDescriptors" : {
