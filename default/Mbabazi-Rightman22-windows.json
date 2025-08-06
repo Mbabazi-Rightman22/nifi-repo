@@ -1056,11 +1056,11 @@
         "Max Total Connections" : "8",
         "dbcp-max-conn-lifetime" : "-1",
         "Validation-query" : "SELECT 1",
-        "Database Connection URL" : "jdbc:postgresql://localhost:5433/postgres",
+        "Database Connection URL" : "jdbc:postgresql://172.16.40.30:5432/postgres",
         "dbcp-time-between-eviction-runs" : "-1",
         "Database User" : "admin",
         "dbcp-soft-min-evictable-idle-time" : "-1",
-        "database-driver-locations" : "/opt/nifi/nifi-current/lib/postgresql-42.7.3.jar",
+        "database-driver-locations" : "/opt/nifi/nifi-current/lib/postgresql-42.7.4.jar",
         "dbcp-max-idle-conns" : "8"
       },
       "propertyDescriptors" : {
@@ -1348,11 +1348,11 @@
         "dbcp-min-evictable-idle-time" : "30 mins",
         "Max Total Connections" : "8",
         "dbcp-max-conn-lifetime" : "-1",
-        "Database Connection URL" : "jdbc:mariadb://localhost:3306/nifi_test?useSSL=false&allowPublicKeyRetrieval=true",
+        "Database Connection URL" : "jdbc:mariadb://172.16.40.30:3306/source_mysql_db?useSSL=false&allowPublicKeyRetrieval=true",
         "dbcp-time-between-eviction-runs" : "-1",
         "Database User" : "root",
         "dbcp-soft-min-evictable-idle-time" : "-1",
-        "database-driver-locations" : "/opt/nifi/nifi-current/lib/mariadb-java-client-3.3.3.jar",
+        "database-driver-locations" : "/opt/nifi/nifi-current/lib/mariadb-java-client-3.4.1.jar",
         "dbcp-max-idle-conns" : "8"
       },
       "propertyDescriptors" : {
