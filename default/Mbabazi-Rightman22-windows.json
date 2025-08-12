@@ -1056,7 +1056,7 @@
         "Max Total Connections" : "8",
         "dbcp-max-conn-lifetime" : "-1",
         "Validation-query" : "SELECT 1",
-        "Database Connection URL" : "jdbc:postgresql://172.16.40.30:5432/postgres",
+        "Database Connection URL" : "jdbc:postgresql://197.243.115.248:5432/postgres",
         "dbcp-time-between-eviction-runs" : "-1",
         "Database User" : "admin",
         "dbcp-soft-min-evictable-idle-time" : "-1",
@@ -1155,7 +1155,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
+            "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
           },
           "sensitive" : false
         },
@@ -1348,9 +1348,9 @@
         "dbcp-min-evictable-idle-time" : "30 mins",
         "Max Total Connections" : "8",
         "dbcp-max-conn-lifetime" : "-1",
-        "Database Connection URL" : "jdbc:mariadb://172.16.40.30:3306/source_mysql_db?useSSL=false&allowPublicKeyRetrieval=true",
+        "Database Connection URL" : "jdbc:mariadb://206.189.25.235:3306/nifi_test?useSSL=false&allowPublicKeyRetrieval=true",
         "dbcp-time-between-eviction-runs" : "-1",
-        "Database User" : "root",
+        "Database User" : "mbabazi",
         "dbcp-soft-min-evictable-idle-time" : "-1",
         "database-driver-locations" : "/opt/nifi/nifi-current/lib/mariadb-java-client-3.4.1.jar",
         "dbcp-max-idle-conns" : "8"
@@ -1447,7 +1447,7 @@
           "name" : "database-driver-locations",
           "resourceDefinition" : {
             "cardinality" : "MULTIPLE",
-            "resourceTypes" : [ "DIRECTORY", "FILE", "URL" ]
+            "resourceTypes" : [ "FILE", "DIRECTORY", "URL" ]
           },
           "sensitive" : false
         },
@@ -2307,7 +2307,7 @@
       "properties" : {
         "put-db-record-allow-multiple-statements" : "false",
         "put-db-record-unmatched-column-behavior" : "Ignore Unmatched Columns",
-        "put-db-record-statement-type" : "INSERT",
+        "put-db-record-statement-type" : "UPDATE",
         "put-db-record-quoted-identifiers" : "false",
         "put-db-record-unmatched-field-behavior" : "Ignore Unmatched Fields",
         "put-db-record-max-batch-size" : "1000",
